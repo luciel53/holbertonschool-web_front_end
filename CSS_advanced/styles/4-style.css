@@ -1,0 +1,38 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body, a {
+	color: var(--text-color);
+}
+
+.visually-hidden {
+	display: none;
+}
+
+.card-category {
+	--color-primary: #D73953;
+}
+
+.section-tagline {
+	--color-primary: #D73953;
+}
+
+:root {
+	--color-primary: #d73953;
+	--color-black: #090909;
+	--color-white: #ffffff;
+	--color-light-grey: #f3f3f3;
+	--color-dark-grey: #353535;
+	--text-color: var(--color-black);
+	--font-family-base: var(--Helvetica-Neue) var(--Helvetica) var(--Arial) var(--sans-serif);
+	--font-family-title: var(--Helvetica-Neue) var(--Helvetica) var(--Arial) var(--sans-serif);
+}
+
+body {
+	font-family: var(--font-family-base)
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: var(--font-family-title);
+}
