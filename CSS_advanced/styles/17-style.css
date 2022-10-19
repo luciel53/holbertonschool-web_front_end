@@ -39,6 +39,7 @@ body, a {
 .section-footer {
 	padding: var(--section-footer-padding);
 	margin: var(--section-footer-align);
+	--footer-padding: 5rem 0 1rem;
 
 }
 .section-title {
