@@ -26,7 +26,7 @@ body, a {
 	--color-light-grey: #f3f3f3;
 	--color-dark-grey: #353535;
 	--text-color: var(--color-black);
-	--font-family-base: var(--Open sans, --Helvetica Neue, --Helvetica, --Arial, --sans-serif);
+	--font-family-base: var(--Open Sans, --Helvetica Neue, --Helvetica, --Arial, --sans-serif);
 	--font-family-title: var(--Raleway, --Helvetica Neue, --Helvetica, --Arial, --sans-serif);
 	--font-size-small: 1.2rem;
 	--font-size-medium: 1.6rem;
