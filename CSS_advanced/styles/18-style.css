@@ -34,8 +34,11 @@ body, a {
 .nav {
 	margin: 0;
 	padding: 0;
-	font-style: none;
 	text-align: center;
+}
+
+.nav.l {
+	font-style: none;
 }
 
 .nav.nav-item {
