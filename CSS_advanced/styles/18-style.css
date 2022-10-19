@@ -49,7 +49,7 @@ body, a {
 
 .nav .nav-link {
 	display: block;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 0 1rem 0;
 }
 
 .nav .nav-link:hover {
