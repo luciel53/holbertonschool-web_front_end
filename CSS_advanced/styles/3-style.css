@@ -3,7 +3,7 @@ html {
 }
 
 body, a {
-	--text-color: #161616;
+	color: var(--text-color);
 }
 
 .visually-hidden {
@@ -24,5 +24,5 @@ body, a {
 	--color-white: #ffffff;
 	--color-light-grey: #f3f3f3;
 	--color-dark-grey: #353535;
-	--text-color: black;
+	--text-color: color-black;
 }
