@@ -99,8 +99,8 @@ ul.row {
 
 .row::after {
 	grid-row: auto;
-	display: table;
-	float: 0;
+	display: none;
+	float: none;
 }
 
 .col-1-3 {
