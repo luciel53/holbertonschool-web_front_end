@@ -165,9 +165,6 @@ ul.row {
 	--nav-item-margin: 0 0 3rem 0;
 	--nav-item-link-hover: var(--color-primary);
 	--section-tagline-margin: 0;
-	--text-color: var(--text-white);
-	--section-title-color: var(--color-white);
-	--background: var(--color-black);
 }
 
 body {
