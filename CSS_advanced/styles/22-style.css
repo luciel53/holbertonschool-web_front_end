@@ -166,6 +166,7 @@ ul.row {
 	--nav-item-link-hover: var(--color-primary);
 	--section-tagline-margin: 0;
 	--text-color: var(--text-white);
+	--section-title-color: var(--color-white);
 	--background: var(--color-black);
 }
 
@@ -515,7 +516,7 @@ button,
 }
 
 html[data-section-theme=“dark”] {
-	color: var(--text-color);
+	--text-color: var(--text-white);
 	--section-title-color: var(--color-white);
-	background: var(--color-black);
+	--background: var(--color-black);
 }
