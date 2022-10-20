@@ -102,6 +102,7 @@ ul.row {
 	display: table;
 	content: none;
 	float: none;
+	clear: both;
 }
 
 .col-1-3 {
