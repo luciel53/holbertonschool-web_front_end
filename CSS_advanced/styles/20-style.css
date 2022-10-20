@@ -97,7 +97,7 @@ ul.row {
 	list-style: none;
 }
 
-.row {
+.row::after {
 	grid-row: auto;
 	display: table;
 	float: 0;
