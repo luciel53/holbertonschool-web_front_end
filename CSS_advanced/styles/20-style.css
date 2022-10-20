@@ -100,7 +100,7 @@ ul.row {
 .row::after {
 	grid-row: auto;
 	display: table;
-	content: none;
+	content: normal;
 	float: none;
 	clear: both;
 }
