@@ -130,7 +130,6 @@ ul.row {
 [class^="col-"] {
 	float: left;
 	padding: 0.5rem;
-	all: none;
 }
 
 :root {
