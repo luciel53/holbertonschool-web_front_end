@@ -127,7 +127,7 @@ ul.row {
 	text-align: right;
 }
 
-[class~="col"] {
+[class~="col-"] {
 	float: left;
 	padding: 0.5rem;
 }
