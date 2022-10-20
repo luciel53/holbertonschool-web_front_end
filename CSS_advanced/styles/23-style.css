@@ -535,7 +535,7 @@ ul.row {
 	--section-title-color: var(--color-white);
 }
 
-.footer-adress {
+.footer-address {
 	color: var(--text-color);
 }
 
@@ -543,6 +543,6 @@ ul.row {
 	display: block;
 }
 
-.social-link svg {
+.social-link > svg {
 	color: var(--text-color);
 }
