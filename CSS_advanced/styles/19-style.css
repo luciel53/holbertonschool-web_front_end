@@ -91,7 +91,7 @@ body, a {
 	margin-right: auto;
 }
 
-.row .ul {
+ul.row {
 	margin: 0;
 	padding: none;
 }
