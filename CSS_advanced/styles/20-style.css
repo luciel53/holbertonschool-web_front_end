@@ -100,8 +100,8 @@ ul.row {
 .row::after {
 	grid-row: auto;
 	display: table;
-	float: none;
-	
+	float: 1 0 1 0;
+
 }
 
 .col-1-3 {
