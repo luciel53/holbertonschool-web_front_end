@@ -175,7 +175,7 @@ body {
 	line-height: var(--line-height-base)
 }
 
-[data-section-theme=“dark”] {
+html[data-section-theme=“dark”] {
 	--text-color: var(--color-white);
 	--section-title-color: var(--color-white);
 	background-color: var(--color-black);
