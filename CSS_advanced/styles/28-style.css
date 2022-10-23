@@ -380,9 +380,9 @@
 	--button-hover-text-decoration: none;
 	--button-hover-background: var(--color-primary);
 	--header-padding: 4rem 0 0;
-	--header-logo-position: relative;
-	--header-logo-link-display: inline-block;
 	--header-logo-position: absolute;
+	--header-logo-link-display: inline-block;
+	--header-logo-link-position: absolute;
 	--header-logo-link-top: -1rem;
 	--header-logo-link-left: 0;
 }
@@ -634,5 +634,5 @@ ul.row {
 	display: var(--header-logo-link-display);
 	position: var(--header-logo-link-position);
 	line-height: var(--header-logo-link-top);
-	float: var(--header-logo-link-left)
+	float: var(--header-logo-link-left);
 }
