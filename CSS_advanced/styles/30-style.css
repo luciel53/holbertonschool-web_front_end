@@ -680,7 +680,7 @@ ul.row {
 .card-work .card-title{
 	text-align: center;
 	margin: 0;
-	opacity: initial;
+	opacity: 0;
 	height: 100%;
 	position: relative;
 }
@@ -693,7 +693,10 @@ ul.row {
 
 .card-work .card-title a::after {
 	position: absolute;
-	position: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	content: "";
 }
 
