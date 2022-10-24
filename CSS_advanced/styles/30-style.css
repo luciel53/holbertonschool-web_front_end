@@ -660,7 +660,7 @@ ul.row {
 
 .card-work .card-image img {
 	height: 30rem;
-	width: 1rem;
+	width: 100%;
 	object-fit: cover;
 }
 
