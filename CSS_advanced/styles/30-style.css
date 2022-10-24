@@ -662,7 +662,7 @@ ul.row {
 	height: 30rem;
 	width: 100%;
 	object-fit: cover;
-	bottom: auto;
+	vertical-align: bottom;
 }
 
 .card-work .card-inner {
@@ -677,7 +677,7 @@ ul.row {
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
-.card-work .card-title a{
+.card-work .card-title{
 	text-align: center;
 	margin: 0;
 	opacity: initial;
@@ -685,7 +685,7 @@ ul.row {
 	position: relative;
 }
 
-.card-work .card-title {
+.card-work .card-title a {
 	display: block;
 	text-decoration: none;
 	padding-top: 45%;
