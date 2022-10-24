@@ -448,6 +448,7 @@ a:active {
 	transition-duration: var(--transition-duration);
 	transition-property: var(--button-hover-background);
 	background-color: var(--transition-property);
+	color: var(--transition-property);
 }
 
 .visually-hidden {
