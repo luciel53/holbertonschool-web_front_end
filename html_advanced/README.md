@@ -86,6 +86,8 @@ Copy the content of `0-index.html` into `1-index.html`
 Copy the content of `1-index.html` into `2-index.html`
 
 ![](https://github.com/luciel53/holbertonschool-web_front_end/blob/main/html_advanced/images/2ba3a0d7878316de5aaa.jpg?raw=true)
+
+
 **Meta charset:**
 
 * add a `meta` tag inside the `head`:
