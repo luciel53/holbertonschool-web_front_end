@@ -7,7 +7,7 @@
 
 * [HTML - elements of a web page](image.png)
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/12/5d9e347964a9cc0e3e24.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221024%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221024T113543Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ff40923da7f4e5467c02aaa1cf3552e7b7fff4a818eecfa08f100b98ade1a0ab)
+![](https://github.com/luciel53/holbertonschool-web_front_end/blob/main/html_advanced/images/5d9e347964a9cc0e3e24.jpg?raw=true)
 
 ## Welcome!
 
@@ -58,7 +58,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 ### Wireframe of `Techium` project
 
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/4/3e4f9e2b3cb73d1768229e086f5da35337be5c6c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221120%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221120T131809Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8e5c99eefb2177840218475426375c0a8655ec22dbd75b1a84b69ce482358368)
+![](https://github.com/luciel53/holbertonschool-web_front_end/blob/main/html_advanced/images/Wireframe%20of%20Techium%20project.png?raw=true)
 
 
 ## Tasks
