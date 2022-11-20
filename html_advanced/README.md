@@ -5,7 +5,7 @@
 
 *For this project, we expect you to look at this concept:*
 
-* [HTML - elements of a web page](https://intranet.hbtn.io/concepts/870)
+* [HTML - elements of a web page](image.png)
 
 ![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/12/5d9e347964a9cc0e3e24.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221024%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221024T113543Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ff40923da7f4e5467c02aaa1cf3552e7b7fff4a818eecfa08f100b98ade1a0ab)
 
@@ -52,12 +52,13 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 ### Sitemap of the project
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/4/4dec2ba9d84a0a55355b1c1e2de4c57854a2d35a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221024%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221024T113543Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=297cd94dfb09a9d2bfbdf9318ca484c184ce1518e653f23699bbdf99f16bd6ce)
+![](https://raw.githubusercontent.com/luciel53/holbertonschool-web_front_end/main/html_advanced/images/Sitemap%20of%20the%20project.png)
 
 
 ### Wireframe of `Techium` project
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/4/3e4f9e2b3cb73d1768229e086f5da35337be5c6c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221024%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221024T113543Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8b7db6c5188a5b234df1c9f94635bf175f94a08e483a46442f6e69669edee130)
+
+![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/4/3e4f9e2b3cb73d1768229e086f5da35337be5c6c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221120%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221120T131809Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8e5c99eefb2177840218475426375c0a8655ec22dbd75b1a84b69ce482358368)
 
 
 ## Tasks
@@ -84,7 +85,7 @@ Copy the content of `0-index.html` into `1-index.html`
 
 Copy the content of `1-index.html` into `2-index.html`
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/11/2ba3a0d7878316de5aaa.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221024%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221024T113543Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a2c1e4b3109706c79a3212b1e9e7eba186db8b95fa56e34c5353d155e25dbd85)
+![](https://github.com/luciel53/holbertonschool-web_front_end/blob/main/html_advanced/images/2ba3a0d7878316de5aaa.jpg?raw=true)
 **Meta charset:**
 
 * add a `meta` tag inside the `head`:
