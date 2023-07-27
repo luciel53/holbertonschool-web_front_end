@@ -10,10 +10,16 @@ $color-warning: #FF0000;
 
 .info {
 	font-size: $info-size;
-	.success {
-		color: $color-success;
-	}
-	.warning {
-		color: $color-warning;
-	}
 }
+
+
+.success {
+	@extend .info;
+	color: $color-success;
+}
+
+.warning {
+	@extend .info;
+	color: $color-warning;
+}
+
