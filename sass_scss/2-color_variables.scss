@@ -1,0 +1,21 @@
+/* Write a Sass file that assigns:
+
+	- The text color #3D3D3D to the HTML tags body and p
+	- The background color #6D6D6D to the HTML tags body and h2
+	- You must use 2 Sass variables */
+
+$primary-color:#3D3D3D;
+$grey-background-color:#6D6D6D;
+
+body {
+	color: $primary-color;
+	background-color: $grey-background-color;
+}
+
+p {
+	color: $primary-color;
+}
+
+h2 {
+	background-color: $grey-background-color;
+}
