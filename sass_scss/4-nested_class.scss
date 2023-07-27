@@ -1,0 +1,16 @@
+/* Write a Sass file that assigns:
+
+	- Text color #3D3D3D to elements inside body tags
+	- Text color #FF0000 to any elements of class .red inside body tags
+	- You must use nested declarations */
+
+$body-text-color: #3d3d3d;
+$class-text-color: #FF0000;
+
+body {
+	color: $body-text-color;
+
+	.red {
+		color: $class-text-color;
+	}
+}
