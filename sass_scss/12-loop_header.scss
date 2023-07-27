@@ -5,6 +5,6 @@
 	- You must use @for statement */
 
 @for $num from 1 to 6 {
-	.h#{$num}
+	h#{$num}
 		{font-size: #{$num}px};
 }
