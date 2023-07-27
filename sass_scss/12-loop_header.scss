@@ -1,0 +1,10 @@
+/* Write a Sass file that creates H* tags, where ‘*’ is the size of the font used.
+
+	- h1 must have font size equal to 1px, h2 must have font size equal to 2px, etc.
+	- You must create H* tags from 1 to 5
+	- You must use @for statement */
+
+@for $num from 1 to 6 {
+	.h#{$num}
+		{font-size: #{$num}px};
+}
