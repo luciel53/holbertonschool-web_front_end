@@ -4,17 +4,20 @@
 	- Margin left and right at 15px to div tags
 	- You must use a mixin */
 
-@mixin margin-mixin {
-	body {
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-
-	div {
-		margin-left: 15px;
-		margin-right: 15px;
-	}
+@mixin body-mixin {
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-@include margin-mixin;
+@mixin div-mixin {
+	margin-right: 15px;
+	margin-left: 15px;
+}
 
+body {
+	@include body-mixin;
+}
+
+div {
+	@include div-mixin;
+}
