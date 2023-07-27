@@ -1,0 +1,12 @@
+/* Write a Sass file that assigns:
+
+	- Font size 20px to h1 tags
+	- Font size 14px to h1 tags, when your screen width is smaller than 320px */
+
+h1 {
+	font-size: 20px;
+	@media screen and (max-width: 320px) {
+			font-size: 14px;
+	}
+}
+
