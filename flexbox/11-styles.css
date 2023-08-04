@@ -534,7 +534,7 @@
     background-position: 50% 0;
   }
 
-  .hero-article::content {
+  .hero-article::before {
     content: empty;
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
