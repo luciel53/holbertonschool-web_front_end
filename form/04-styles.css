@@ -685,7 +685,7 @@
 		padding: 0 0 .5rem;
 	}
 
-	input[type="text"], input[type="email"], input[type="textarea"] {
+	input[type="text"] [type="email"] [type="textarea"] {
 		position: relative;
 		width: 100%;
 		padding: 1.2rem;
