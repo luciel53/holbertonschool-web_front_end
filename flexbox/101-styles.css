@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:first baseline;
+  position: relative;
+  top: 4em;
+}
+
+.box {
+  color: white;
+  display: flex;
+  width: 3em;
+  height: 2em;
+  justify-content: center;
+}
+
+[class*="box"] {
+  align-items: center;
+  position: relative;
+  top: -0.4em;
+}
+
+.box1 {
+  background-color: rgb(81, 209, 160);
+  font-size: 22px;
+}
+
+.box2 {
+  background-color: rgb(71, 180, 223);
+  font-size: 40px;
+}
+
+.box3 {
+  background-color: rgb(51, 66, 93);
+  font-size: 105px;
+}
+
+.box4 {
+  background-color: rgb(139, 81, 211);
+  font-size: 40px;
+}
+
+.box5 {
+  background-color:rgb(221, 147, 34) ;
+  font-size: 22px;
+}
