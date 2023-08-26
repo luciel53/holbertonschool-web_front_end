@@ -1,8 +1,10 @@
 # Sass & Scss
 
+![](https://zupimages.net/up/23/34/rbzo.jpg)
+
 ## Resources
 
-** Read or watch:**
+**Read or watch:**
 
 - Sass Basics
 - Sass flow control directives: @if, @for, @each and @while
@@ -61,6 +63,7 @@ $ gem install sass -v 3.7.4
 $ sass --version
 Ruby Sass 3.7.4
 ```
+![](https://zupimages.net/up/23/34/8k3x.jpg)
 
 ## Tasks
 
@@ -513,3 +516,7 @@ guillaume@ubuntu:~/$
 - GitHub repository: holbertonschool-web_front_end
 - Directory: sass_scss
 - File: 102-media_query.scss
+
+## Author:
+
+Lucie Leroty (l.leroty.pro@gmail.com)
