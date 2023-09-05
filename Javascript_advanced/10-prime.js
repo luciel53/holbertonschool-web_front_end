@@ -29,5 +29,3 @@ for (let cent = 0; cent < 100; cent++) {
 }
 const perf2 = performance.now();
 console.log("Execution time of calculating prime numbers 100 times was " + (perf2 - perf1) + " milliseconds.");
-
-
