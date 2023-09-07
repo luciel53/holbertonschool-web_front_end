@@ -12,15 +12,18 @@
 
     <body>
 		<script type="application/javascript">
-			$(function createTextElement () {
+			function createTextElement () {
 				// create a paragraph element
-				var $paragraph = document.createElement("p");
+				var $paragraph = $("<p></p>");
 				// add the text to the paragraph
-				$paragraph.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in diam risus. Nunc sit amet euismod ipsum. Aenean tempus ex sed est volutpat, sed sodales velit tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin auctor sollicitudin eleifend. Vivamus porta enim vitae mauris commodo, vitae tempor tellus elementum. Quisque sed pellentesque nulla, at eleifend nisi. Phasellus eget tincidunt ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+				$paragraph.text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in diam risus. Nunc sit amet euismod ipsum. Aenean tempus ex sed est volutpat, sed sodales velit tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin auctor sollicitudin eleifend. Vivamus porta enim vitae mauris commodo, vitae tempor tellus elementum. Quisque sed pellentesque nulla, at eleifend nisi. Phasellus eget tincidunt ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
 				// add the paragraph to the body
 				$("body").append($paragraph);
-			})
-		</script>
+			};
+			$(function() {
+				createTextElement();
+			});
+				</script>
 
     </body>
 
