@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+		<title>Task 7</title>
+
+    </head>
+
+    <body>
+		<script type="application/javascript">
+			/* function that creates the form element */
+			function createSearchForm () {
+				/* Append input text + submit button */
+				$('body').append('<input type="text" id="search_id">');
+				$('body').append('<input type="submit" id="search_btn">');
+				/* Append an empty ul to add research text */
+				$('body').append('<ul>');
+				/* makes the button clickable and execute queryWikipedia */
+				$('#search_btn').on('click', function (event) {
+					let query = $("#search_id").val();
+					queryWikipedia(query);
+				});
+			}
+
+			/* function to add a new article */
+			function addNewArticle (id, title, snippet) {
+				$('ul').append(
+					$('<li>').append(
+						$('<p>').append(
+							$('<span>').text(id + '-').append(
+								$('<b>').text(title)
+							)
+						),
+						$('<p>').append(snippet)
+				));
+			}
+
+			function queryWikipedia (search) {
+				/* Ajaw request */
+				$.ajax({
+					/* Wikipedia's API url */
+					url: 'https://en.wikipedia.org/w/api.php',
+					/* data to send */
+					data: {
+						action: 'query',
+						format: 'json',
+						list: 'search',
+						srsearch: search,
+						origin: '*',
+					},
+					/* when successful, function called, receive json data */
+					success: function (data) {
+					/* browse the results of the request in data */
+					data.query.search.forEach(function (result) {
+						/* for each result, call addNewArticle to add it */
+						addNewArticle(result.pageid.toString(), result.title, result.snippet);
+					});
+				},
+
+			});
+		}
+		$(function () {
+			createSearchForm();
+		});
+
+
+				</script>
+
+    </body>
+
+</html>
