@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    <title>Task 12</title>
+</head>
+<body>
+    <script type="application/javascript">
+        function addPostRow(data) {
+            let p = $('<p id="row-' + data.id + '">');
+            let span_del = $('<span>').text('(delete)').on('click', function () {
+                deletePost(data.id); // Pass the post id to deletePost function
+            });
+            let span = $('<span>').text('Post created with id ' + data.id + ', title: ' + data.title + ', author: ' + data.author);
+            p.append(span_del, span);
+            $('body').append(p);
+        }
+
+        function listPosts() {
+            $.ajax({
+                url: 'http://localhost:3000/posts',
+                dataType: 'json',
+                method: 'GET',
+                success: function (data, status, xhr) {
+                    if (xhr.status === 200) {
+                        data.forEach(function(result) {
+                            addPostRow(result);
+                        });
+                    }
+                    else {
+                        alert('Server Error');
+                    }
+                },
+                error: function(xhr, status, err) {
+                    alert('Error fetching posts');
+                }
+            });
+        };
+
+        function buildForm() {
+            $('body').append('<form>');
+            $('form').append(
+                $('<div>').append(
+                    $('<label for="author">').text('Author'),
+                    $('<input type="text" id="author">')
+                ),
+                $('<div>').append(
+                    $('<label for="title">').text('Title'),
+                    $('<textarea id="title">')
+                ),
+                $('<input type="submit">').on('click', function (e) {
+                    e.preventDefault(); // Prevent the default form submission
+                    sendForm();
+                })
+            )
+        }
+
+        function sendForm() {
+            $('body').after($('<p>').text('About to send the query to the API'));
+            var data = {
+                title: $('#title').val(),
+                author: $('#author').val()
+            };
+            $.ajax({
+                url: 'http://localhost:3000/posts',
+                dataType: 'json',
+                method: 'POST',
+                data: data,
+                success: function(data, status, xhr) {
+                    if (xhr.status == 201) {
+                        addPostRow(data);
+                        $('#title').val(''); // Clear the input fields
+                        $('#author').val('');
+                    }
+                    else {
+                        alert('Error sending the POST query');
+                    }
+                },
+                error: function(xhr, status, err) {
+                    alert('Error sending the POST query');
+                }
+            })
+        }
+
+        function deletePost(id) {
+            $.ajax({
+                url: 'http://localhost:3000/posts/' + id, // Include the post id in the URL
+                dataType: 'json',
+                method: 'DELETE',
+                success: function(data, status, xhr) {
+                    if (xhr.status == 200) {
+                        $(p).remove(); // Remove the paragraph
+                    }
+                    else {
+                        alert('Post was not deleted');
+                    }
+                },
+                error: function(xhr, status, err) {
+                    alert('Post was not deleted');
+                }
+            })
+        }
+
+        $(function () {
+            listPosts();
+            buildForm();
+        });
+    </script>
+</body>
+</html>
