@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+		<title>Task 10</title>
+
+    </head>
+
+    <body>
+		<script type="application/javascript">
+			function addPostRow (data) {
+				let p = $('<p>');
+				let span = $('<span>').text('Post created with id ' + data.id + ', title: ' + data.title + ', author:' + data.author);
+				p.append(span);
+				$('body').append(p);
+			}
+
+			function listPosts () {
+				/* Ajax request to recover the data from local server */
+				$.ajax({
+					url: 'http://localhost:3000/posts', /* adress of the server */
+					dataType: 'json', /* type of data */
+					method: 'GET', /* method */
+					/* if success, browse the results and calls addPostRow else alert */
+					success: function (data, status, xhr) {
+						if (xhr.status === 200) {
+							data.forEach(function(result) {
+								addPostRow(result);
+							});
+						}
+						else {
+							alert('Server Error');
+						}
+					},
+				})
+				};
+
+			$(function () {
+				listPosts ();
+
+			});
+				</script>
+
+    </body>
+
+</html>
