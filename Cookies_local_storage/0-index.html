@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Task 0</title>
-</head>
-<body>
-  <h1>Login to the website</h1>
-    <input type="text" id="firstname" placeholder="Firstname">
-    <input type="email" id="email" placeholder="Email">
-    <button onclick="setCookies()" id="login-btn">Log me in</button>
-  <h1>Cookies</h1>
-  <button onclick="showCookies()" id="cookie-btn">Show the cookies</button>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>Everybody loves cookies</title>
+	</head>
+	<body>
+		<!-- Javascript -->
+		<script type="application/javascript">
+			function setCookies() {
+				/* Set variables */
+				let firstnameValue = document.getElementById("firstname").value;
+				let emailValue = document.getElementById("email").value;
+				/* create 2 cookies */
+				document.cookie = "firstname=" + firstnameValue;
+				document.cookie = "email=" + emailValue;
+				alert('Congrats !');
+			}
 
-  <script type="application/javascript">
-    function setCookies () {
-      const firstname = document.querySelector('#firstname').value;
-      const email = document.querySelector('#email').value;
+			function showCookies() {
+				/* create a DOM element p */
+				let paragraph = document.createElement("p");
+				/* set the inner html with Cookies: and value of the cookie */
+				paragraph.innerHTML = "Cookies: " + document.cookie;
+				/* add paragraph at the bottom of the page */
+				document.body.appendChild(paragraph);
+			}
+		</script>
 
-      document.cookie = `firstname=${firstname}`;
-      document.cookie = `email=${email}`;
-    }
-
-    function showCookies () {
-      const paragraph = document.createElement('p');
-      paragraph.textContent = `Cookies: ${document.cookie}`;
-      document.querySelector('body').appendChild(paragraph);
-    }
-  </script>
-</body>
+		<!-- html -->
+		<h1>Login to the website</h1>
+		<input type="text" id="firstname" placeholder="Firstname">
+		<input type="text" id="email" placeholder="Email">
+		<button onclick="setCookies()">Log me in</button><br/>
+		<h1>Cookies</h1>
+		<button onclick="showCookies()">Show the cookies</button>
+	</body>
 </html>
