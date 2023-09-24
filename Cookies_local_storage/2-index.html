@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>Everybody loves cookies</title>
+	</head>
+	<body>
+		<!-- Javascript -->
+		<script type="application/javascript">
+			function setCookies() {
+				/* Set variables */
+				let firstnameValue = document.getElementById("firstname").value;
+				let emailValue = document.getElementById("email").value;
+				/* create 2 cookies */
+				document.cookie = "firstname=" + firstnameValue + "; expires=864000";
+				document.cookie = "email=" + emailValue + "; expires=864000";
+				alert('Congrats !');
+				console.log(document.cookie);
+			}
+
+			function showCookies() {
+				/* Set variables */
+				let firstnameValue = document.getElementById("firstname").value;
+				let emailValue = document.getElementById("email").value;
+				/* create a DOM element p */
+				let paragraph = document.createElement("p");
+				/* set the inner html with Cookies: and value of the cookie */
+				paragraph.innerHTML = "Email: " + getCookie(emailValue) + " - Firstname: " + getCookie(firstnameValue);
+				/* add paragraph at the bottom of the page */
+				document.body.appendChild(paragraph);
+
+			}
+
+			function getCookie(name) {
+				if (document.cookie.length == 0)
+				{
+					return ("");
+				}
+				let sepAllCookies = document.cookie.split("; ");
+				for (let i = 0; i < document.cookie.length; i++)
+				{
+					let cookie = sepAllCookies[i].split("=");
+					console.log(cookie[1]);
+					if (cookie[1] == name)
+					{
+						return decodeURIComponent(cookie[1]);
+					}
+				}
+			}
+		</script>
+
+		<!-- html -->
+		<h1>Login to the website</h1>
+		<input type="text" id="firstname" placeholder="Firstname">
+		<input type="text" id="email" placeholder="Email">
+		<button onclick="setCookies()">Log me in</button><br/>
+		<h1>Cookies</h1>
+		<button onclick="showCookies()">Show the cookies</button>
+	</body>
+</html>
