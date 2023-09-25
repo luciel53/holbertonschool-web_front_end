@@ -29,21 +29,26 @@
 				paragraph.innerHTML = "Email: " + getCookie(emailValue) + " - Firstname: " + getCookie(firstnameValue);
 				/* add paragraph at the bottom of the page */
 				document.body.appendChild(paragraph);
-
 			}
 
 			function getCookie(name) {
+				/* checks length of the cookies if null, return "" */
 				if (document.cookie.length == 0)
 				{
 					return ("");
 				}
+				/* Split the cookies chain in an array of individual chains */
 				let sepAllCookies = document.cookie.split("; ");
+				/* browse all the cookies */
 				for (let i = 0; i < document.cookie.length; i++)
 				{
+					/* split the cookie in 2 parts to have name and value */
 					let cookie = sepAllCookies[i].split("=");
 					console.log(cookie[1]);
+					/* check if name of cookie is the same as the arg name */
 					if (cookie[1] == name)
 					{
+						/* return value of cookie */
 						return decodeURIComponent(cookie[1]);
 					}
 				}
