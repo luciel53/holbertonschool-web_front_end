@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+		<title>Everybody loves cookies</title>
+	</head>
+		<body>
+		<script type="application/javascript">
+			/* array availableItems that will contain all the available items. */
+			let availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+			/* check if local storage is available on browser */
+			if (typeof(Storage) !== "undefined") {
+				createStore();
+				displayCart();
+			} else {
+				alert('Sorry, your browser does not support Web storage. Try again with a better one');
+			}
+
+			function addItemToCart(item) {
+				localStorage.setItem(item, true);
+			}
+
+			function createStore() {
+				/* Create a ul and append it to the DOM */
+				let ul = document.createElement("ul");
+				document.body.appendChild(ul);
+
+				for (let i = 0; i < availableItems.length; i++)
+				{
+					/* and create a list item to add to the ul */
+					let li = document.createElement("li");
+					ul.appendChild(li);
+
+					/* item displays the nameof the avalaible product */
+					li.textContent = availableItems[i];
+
+					/* On click the item should call the function addItemToCart */
+					li.addEventListener("click", function() {
+						addItemToCart(this.textContent);
+					});
+				}
+			}
+
+			function displayCart() {
+				let length = localStorage.length;
+				console.log(length);
+
+				if (length > 0) {
+					let p = document.createElement("p");
+					p.textContent = "You previously had " + length + " items in your cart";
+					document.body.appendChild(p);
+				}
+			}
+		</script>
+	<!-- html -->
+
+	</body>
+</html>
