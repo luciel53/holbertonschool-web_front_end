@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+		<title>Everybody loves cookies</title>
+	</head>
+		<body>
+		<script type="application/javascript">
+			/* array availableItems that will contain all the available items. */
+			let availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+			/* check if local storage is available on browser */
+			if (typeof(Storage) !== "undefined") {
+				createStore();
+
+			} else {
+				alert('Sorry, your browser does not support Web storage. Try again with a better one');
+			}
+
+			function getCartFromStorage() {
+				let cart = sessionStorage.getItem('cart');
+				if (cart)
+					return JSON.parse(cart);
+				else
+					return {};
+			}
+
+			function addItemToCart(item) {
+				/* get current cart */
+				let cart = getCartFromStorage();
+				if (cart[item])
+					cart[item] += 1;
+				else
+					cart[item] = 1;
+
+				/* Store the updated cart back in Session Storage */
+				sessionStorage.setItem('cart', JSON.stringify(cart));
+				displayCart();
+			}
+
+			function removeItemfromCart (item) {
+				item.remove();
+				sessionStorage.setItem('cart', JSON.stringify(cart));
+				displayCart();
+			}
+
+			function clearCart () {
+				sessionStorage.removeItem('cart');
+				displayCart();
+			}
+
+			function createStore() {
+				let title = document.createElement('h2');
+				title.textContent = 'Available products:';
+				document.body.appendChild(title);
+
+				/* Create a ul and append it to the DOM */
+				let ul = document.createElement("ul");
+
+				for (let i = 0; i < availableItems.length; i++)
+				{
+					/* and create a list item to add to the ul */
+					let li = document.createElement("li");
+					ul.appendChild(li);
+
+					/* item displays the nameof the avalaible product */
+					li.textContent = availableItems[i];
+
+					/* On click the item should call the function addItemToCart */
+					li.addEventListener("click", function() {
+						addItemToCart(this.textContent);
+					});
+					ul.appendChild(li);
+				}
+				document.body.appendChild(ul);
+				displayCart();
+			}
+
+			function displayCart() {
+				/* add inside a h2 tag with the text 'your cart' */
+				let titlefind = document.querySelector("h2");
+				if (titlefind)
+					titlefind.remove();
+
+				let divFind = document.getElementById("cart");
+				if (divFind)
+					divFind.remove();
+
+				/* create cart heading */
+				let h2 = document.createElement("h2");
+				h2.textContent = "Your cart:";
+				document.body.appendChild(h2);
+
+				/* create div */
+				let div = document.createElement("div");
+				div.id = "cart";
+				document.body.appendChild(div);
+
+				updateCart();
+			}
+
+			function updateCart() {
+				let cart = getCartFromStorage();
+				/* add a list to the div tag created previously */
+				let div = document.getElementById("cart");
+				let ul = document.createElement("ul");
+
+				/* If the cart is empty, it should add an item Your cart is empty */
+				if (Object.keys(cart).length === 0) {
+					let empty = document.createElement("li");
+					empty.textContent = "Your cart is empty";
+					ul.appendChild(empty);
+				}
+				else {
+					for (let item in cart) {
+						let li = document.createElement("li");
+						li.textContent = item + " x " + cart[item];
+
+						/* If the cart is not empty, it should add the list of items within the cart */
+						let a = document.createElement("a");
+						a.textContent = "(remove)";
+						/* add remove click */
+						a.addEventListener('click', function() {
+							removeItemfromCart(item);
+						});
+
+						li.appendChild(a);
+						ul.appendChild(li);
+
+					}
+				}
+				let clear = document.createElement("li");
+				clear.textContent = "Clear my cart";
+				clear.addEventListener("click", function() {
+					clearCart();
+				});
+				ul.insertBefore(clear, ul.firstChild);
+
+				div.appendChild(ul);
+			}
+		</script>
+	<!-- html -->
+
+	</body>
+</html>
